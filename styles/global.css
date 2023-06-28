@@ -137,7 +137,7 @@ header {
 /* ------------ Presentation section -------------- */
 
 #presentation_section {
-    background-image: url(../assets/bitcoin.jpg);
+    background-image: url(../assets/imgs/bitcoin.jpg);
     background-position: center center;
     background-size: cover;
     height: auto;
@@ -227,16 +227,16 @@ header {
 
 @keyframes slideshow {
     25% {
-        background-image: url(../assets/money-real.jpg);
+        background-image: url(../assets/imgs/money-real.jpg);
     }
     50% {
-        background-image: url(../assets/money-dolar-1.jpg);
+        background-image: url(../assets/imgs/money-dolar-1.jpg);
     }
     75% {
-        background-image: url(../assets/money-dolar-2.jpg);
+        background-image: url(../assets/imgs/money-dolar-2.jpg);
     }
     100% {
-        background-image: url(../assets/bitcoin.jpg);
+        background-image: url(../assets/imgs/bitcoin.jpg);
     }
 }
 /* ------------------------------------------------- */
