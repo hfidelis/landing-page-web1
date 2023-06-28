@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
 
 :root {
@@ -10,20 +10,21 @@
     /* Color Palette */
     --gray: #343740;
     --light-gray: #8F96A6;
-    --dark-gray: #0D0D0D;
+    --dark-gray: #1d1c1c;
     --green: #498C3F;
     --light-green: #5DBF4E;
     --dark-green: #224d1b;
 
     /* Fonts */
     --text-font: 'Roboto', sans-serif;
-    --highlight-font: 'Unbounded', cursive;
+    --highlight-font: 'Lexend Deca', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 *::after, *::before {
@@ -32,8 +33,100 @@
 
 html {
     width: 100vw;
+    scroll-behavior: smooth;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
+
+/* -------------- Header && Content -------------------- */
+header {
+    height: 12vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background-color: var(--dark-gray);
+}
+
+#logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4em;
+
+    text-decoration: none;
+}
+
+#logo a i {
+    color: var(--green);
+    font-size: 4em;
+}
+
+#logo a span {
+    font-size: 2em;
+    font-family: var(--highlight-font);
+    font-weight: 600;
+
+    color: var(--white);
+
+    text-transform: uppercase;
+}
+
+#menu ul {
+    display: flex;
+    list-style: none;
+    gap: 6vw;
+}
+
+#menu ul li a {
+    font-family: var(--text-font);
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: .8px;
+    text-decoration: none;
+
+    color: var(--white);
+
+    transition: 400ms;
+}
+
+#menu ul li a:hover {
+    color: var(--black);
+    background-color: var(--white);
+
+    border-radius: .4em;
+    padding: 1em;
+}
+
+#login-button {
+    font-family: var(--highlight-font);
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: var(--black);
+    background-color: var(--light-green);
+
+    padding: .8em 3em;
+    border: none;
+    border-radius: .4em;
+
+    cursor: pointer;
+
+    transition: 400ms;
+}
+
+#login-button:hover {
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+/* ------------------------------------------------- */
