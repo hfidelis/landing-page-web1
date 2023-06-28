@@ -5,7 +5,9 @@
 :root {
     /* Basics */
     --black: #0B0B0B;
-    --white: #f8f6f6;
+    --white: #efeded;
+    --heavy-shadow: rgba(0, 0, 0, .6);
+    --light-shadow: rgba(0, 0, 0, .35);
 
     /* Color Palette */
     --gray: #343740;
@@ -56,7 +58,9 @@ header {
 
     background-color: var(--dark-gray);
 
-    box-shadow: 0 2px 24px 4px rgba(0, 0, 0, .6);
+    z-index: 5;
+
+    box-shadow: 0 2px 24px 4px var(--heavy-shadow);
 }
 
 #logo a {
@@ -135,7 +139,6 @@ header {
 /* ------------------------------------------------- */
 
 /* ------------ Presentation section -------------- */
-
 #presentation_section {
     background-image: url(../assets/imgs/bitcoin.jpg);
     background-position: center center;
@@ -145,6 +148,8 @@ header {
 
     animation: slideshow 12s infinite ease-in-out;
     transition: 400ms;
+    z-index: 4;
+    box-shadow: 0 4px 12px 8px var(--light-shadow);
 }
 
 #presentation_section #presentation_content {
@@ -241,3 +246,139 @@ header {
 }
 /* ------------------------------------------------- */
 
+/* ------------ HowWorks Section ----------------- */
+#howworks_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4em;
+
+    height: auto;
+    width: 100%;
+
+    background-color: var(--white);
+
+    padding: 4em 10% 6em 10%;
+}
+
+#howworks_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+#howworks_title h2 {
+    font-size: 2.2em;
+    font-family: var(--highlight-font);
+    font-weight: 600;
+
+    color: var(--black);
+}
+
+#howworks_title p {
+    font-family: var(--text-font);
+    font-size: 1.1em;
+
+    color: var(--gray);
+
+    padding-inline: 2em;
+
+    text-align: center;
+}
+
+#howworks_title p span {
+    font-family: var(--text-font);
+    font-weight: 500;
+
+    color: var(--dark-gray);
+}
+
+#howworks_steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2em;
+}
+
+#howworks_steps:has(.step_card:hover) .step_card:not(:hover) {
+    filter: grayscale(1);
+    transform: scale(0.9);
+}
+
+.step_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2em;
+
+    height: auto;
+    width: 20%;
+
+    transition: 500ms;
+
+    cursor: pointer;
+}
+
+.step_card:hover {
+    transform: scale(1.1);
+}
+
+.card_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8em;
+    width: 8em;
+
+    background-color: var(--dark-gray);
+    box-shadow: 0 0 12px 4px var(--light-shadow);
+
+    border-radius: 50%;
+
+    animation: glow 3s infinite;
+
+    transition: 500ms;
+}
+
+.card_icon i {
+    font-size: 4em;
+
+    color: var(--light-green);
+}
+
+.step_card h3 {
+    font-family: var(--highlight-font);
+    font-size: 1.2em;
+    font-weight: 600;
+
+    text-align: center;
+    
+    color: var(--dark-gray);
+}
+
+.step_card p {
+    font-family: var(--text-font);
+    font-weight: 400;
+    font-size: .9em;
+
+    text-align: center;
+}
+
+@keyframes glow {
+    25% {
+        box-shadow: 0 0 24px 4px var(--dark-green);
+    }
+    50% {
+        box-shadow: 0 0 24px 6px var(--green);
+    }
+    75% {
+        box-shadow: 0 0 24px 8px var(--light-green);
+    }
+    100% {
+        box-shadow: 0 0 24px 4px var(--light-shadow);
+    }
+}
