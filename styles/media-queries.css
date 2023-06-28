@@ -13,9 +13,27 @@
         align-items: start;
         justify-content: center;
     }
+    #presentation_section #presentation_content {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        gap: 2.2em;
+        padding: 4em;
+    }
+    #alert-text {
+        align-items: center;
+        text-align: center;
+    }
+    #alert-text button {
+        font-size: .8em;
+        padding: .8em .6em;
+    }
+    #alert-text p {
+        text-align: center;
+    }
 }
 
 @media (max-width: 1168px) {
+    /* Header */
     #logo a i {
         font-size: 2.5em;
     }
@@ -26,6 +44,16 @@
         font-size: .8em;
     }
     #login-button {
+        font-size: .8em;
+    }
+    /* Presentation Section*/
+    #alert-text h1 {
+        font-size: 1.6em;
+    }
+    #alert-text p {
+        font-size: .8em;
+    }
+    #alert-text button {
         font-size: .8em;
     }
 }
