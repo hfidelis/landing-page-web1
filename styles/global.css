@@ -15,7 +15,7 @@
     --dark-gray: #0c0c0c;
     --green: #498C3F;
     --light-green: #5DBF4E;
-    --dark-green: #224d1b;
+    --dark-green: #173613;
 
     /* Fonts */
     --text-font: 'Roboto', sans-serif;
@@ -114,14 +114,22 @@ header {
 }
 
 #login-button {
+    color: var(--black);
+    background-color: var(--light-green);
+}
+
+#login-button:hover {
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+.button_style {
     font-family: var(--highlight-font);
     font-size: 1em;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-
-    color: var(--black);
-    background-color: var(--light-green);
 
     padding: .8em 3em;
     border: none;
@@ -130,11 +138,6 @@ header {
     cursor: pointer;
 
     transition: 400ms;
-}
-
-#login-button:hover {
-    background-color: var(--dark-green);
-    color: var(--white);
 }
 /* ------------------------------------------------- */
 
@@ -181,6 +184,8 @@ header {
     font-size: 2.2em;
 
     color: var(--white);
+
+    animation: pulse 2.5s infinite ease;
 }
 
 #alert-text h1 i {
@@ -245,6 +250,8 @@ header {
     }
 }
 /* ------------------------------------------------- */
+
+/* ----------- Section Container Class ------------ */
 .section_container {
     display: flex;
     align-items: center;
@@ -396,6 +403,8 @@ header {
 /* -------------- Partners Section ---------------- */
 #partners_section {
     background-color: var(--gray);
+    z-index: 2;
+    box-shadow: 0 .25em 1.2em .25em var(--heavy-shadow);
 }
 
 #partners_title h2 {
@@ -457,4 +466,110 @@ header {
 
 .company_img figure img {
     object-fit: cover;
+}
+/* ------------------------------------------------- */
+/* [].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)})
+*/
+/* ----------------- Faq Section ------------------ */
+#faq_section {
+    background-color: var(--dark-green);
+}
+
+#faq_title h2 {
+    color: var(--white);
+    text-align: center;
+}
+
+#faq_title h2 i {
+    color: var(--light-green);
+}
+
+#faq_section form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    padding-inline: 12em;
+
+    width: 100%;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: .5em;
+}
+
+.input_container_small {
+    width: 50%;
+}
+
+.input_container_large {
+    width: 100%;
+    
+    margin: 1.2em 0;
+}
+
+.faq_label {
+    font-family: var(--highlight-font);
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: .08em;
+    color: var(--white);
+}
+
+.form_input {
+    font-family: var(--text-font);
+    font-weight: 500;
+
+    border-radius: .25em;
+    border: none;
+    outline: none;
+    padding: .8em;
+    
+    transition: 500ms;
+
+    box-shadow: 0 .4em .8em .1em var(--light-shadow);
+}
+
+.form_input:focus {
+    box-shadow: 0 .2em .8em .05em var(--light-green);
+}
+
+.form_input::placeholder {
+    font-style: italic;
+}
+
+#name_input {
+    width: 90%;
+}
+
+#email_input {
+    width: 100%;
+}
+
+#desc_input {
+    height: 12em;
+    width: 100%;
+    resize: none;
+}
+
+#form_button {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    color: var(--black);
+    box-shadow: 0 .4em .8em .1em var(--light-shadow);
+}
+
+#form_button:hover {
+    color: var(--light-green);
+    background-color: var(--dark-gray);
+}
+
+#form_button i {
+    margin-left: .15em;
 }

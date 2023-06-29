@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/media-queries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./styles/hexagon-animation.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="shortcut icon" href="assets/page-icon/ico.png" type="image/x-icon">
@@ -41,7 +42,7 @@
                 </li>
             </ul>
         </nav>
-        <button id="login-button">Entrar</button>
+        <button id="login-button" class="button_style">Entrar</button>
     </header>
 
     <section id="presentation_section">
@@ -297,6 +298,27 @@
                 <figure><img src="./assets/imgs/companies/company_5.png" alt="Partner Company Logo"></figure>
             </div>
         </div>
+    </section>
+
+    <section class="section_container" id="faq_section">
+        <div class="section_title_container" id="faq_title">
+            <h2>Quer fazer negócios? Entre em contato <i class="ph-duotone ph-rocket-launch"></i></h2>
+        </div>
+        <form action="#" action="#">
+            <div class="input_container input_container_small">
+                <label for="name_input" class="faq_label">Nome</label>
+                <input type="text" name="name_input" class="form_input" id="name_input" placeholder="Seu nome">
+            </div>
+            <div class="input_container input_container_small">
+                <label for="email_input" class="faq_label">E-mail</label>
+                <input type="email" name="email_input" class="form_input" id="email_input" placeholder="seuemail@email.com">
+            </div>
+            <div class="input_container input_container_large">
+                <label for="desc_input" class="faq_label">Mensagem</label>
+                <textarea name="desc_input" class="form_input" id="desc_input" placeholder="Escreva seu assunto..."></textarea>
+            </div>
+            <button type="submit" id="form_button" class="button_style">Enviar<i class="ph-duotone ph-paper-plane-tilt"></i></button>
+        </form>
     </section>
 </body>
 </html>
