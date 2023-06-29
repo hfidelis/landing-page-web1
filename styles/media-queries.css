@@ -82,6 +82,21 @@
     #faq_section form {
         padding-inline: 2em!important;
     }
+    /* Footer */
+    footer {
+        padding: 4em 2em;
+    }
+    #footer_social_medias a i {
+        font-size: 1.5em;
+    }
+
+    #footer_copyright {
+        font-size: .8em;
+    }
+
+    #footer_copyright i {
+        font-size: 1.4em;
+    }
 }
 
 @media (max-width: 1168px) {

@@ -467,8 +467,7 @@ header {
     object-fit: cover;
 }
 /* ------------------------------------------------- */
-/* [].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)})
-*/
+
 /* ----------------- Faq Section ------------------ */
 #faq_section {
     background-color: var(--dark-green);
@@ -572,4 +571,56 @@ header {
 
 #form_button i {
     margin-left: .15em;
+}
+/* ------------------------------------------------- */
+
+/* ------------------- Footer --------------------- */
+footer {
+    height: 12vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--dark-gray);
+    box-shadow: 0 -.25em 1.2em .25em var(--heavy-shadow);
+    padding: 2em 6em;
+}
+
+#footer_social_medias {
+    display: flex;
+    gap: 1em;
+}
+
+#footer_social_medias a {
+    text-decoration: none;
+}
+
+#footer_social_medias a i {
+    font-size: 2.2em;
+    color: var(--white);
+    transition: 500ms;
+}
+
+#footer_social_medias a i:hover {
+    color: var(--light-green);
+    padding: .25em;
+    outline: 1px solid var(--light-green);
+    border-radius: .25em;
+}
+
+#footer_copyright {
+    display: flex;
+    align-items: center;
+
+    font-family: var(--highlight-font);
+    font-weight: 600;
+    font-size: 1em;
+    color: var(--white);
+}
+
+#footer_copyright i {
+    font-size: 2em;
+    margin-right: .25em;
 }
