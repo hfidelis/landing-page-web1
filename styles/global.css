@@ -336,7 +336,6 @@ header {
 
     transition: 500ms;
     margin-bottom: auto;
-    cursor: pointer;
 }
 
 .step_card:hover {
