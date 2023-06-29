@@ -472,6 +472,7 @@ header {
 /* ----------------- Faq Section ------------------ */
 #faq_section {
     background-color: var(--dark-green);
+    padding: 4em 10% 4em 10%!important;
 }
 
 #faq_title h2 {
