@@ -33,10 +33,10 @@
         text-align: center;
     }
     /* HowWorks Section */
-    #howworks_title h2 {
+    .section_title_container h2 {
         font-size: 1.8em;
     }
-    #howworks_title p {
+    .section_title_container p {
         font-size: .9em;
     }
     #howworks_steps {
@@ -45,11 +45,8 @@
     }
     .step_card {
         flex-direction: row;
-        width: 100%;
+        width: 100%!important;
         gap: 2em;
-    }
-    .step_card h3 {
-        flex-grow: 1;
     }
     .card_icon {
         height: 4em;
@@ -86,4 +83,7 @@
         font-size: .8em;
     }
     /* HowWorks Section */
+    .step_card {
+        width: 25%;
+    }
 }

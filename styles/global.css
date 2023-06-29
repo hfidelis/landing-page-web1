@@ -6,8 +6,8 @@
     /* Basics */
     --black: #0B0B0B;
     --white: #efeded;
-    --heavy-shadow: rgba(0, 0, 0, .6);
-    --light-shadow: rgba(0, 0, 0, .35);
+    --heavy-shadow: rgba(0, 0, 0, .8);
+    --light-shadow: rgba(0, 0, 0, .45);
 
     /* Color Palette */
     --gray: #343740;
@@ -42,6 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow-x: hidden;
 }
 
 /* -------------- Header && Content -------------------- */
@@ -60,7 +61,7 @@ header {
 
     z-index: 5;
 
-    box-shadow: 0 2px 24px 4px var(--heavy-shadow);
+    box-shadow: 0 .1em 1.5em .25em var(--heavy-shadow);
 }
 
 #logo a {
@@ -140,7 +141,7 @@ header {
 
 /* ------------ Presentation section -------------- */
 #presentation_section {
-    background-image: url(../assets/imgs/bitcoin.jpg);
+    background-image: url(../assets/imgs/slide/bitcoin.jpg);
     background-position: center center;
     background-size: cover;
     height: auto;
@@ -149,7 +150,7 @@ header {
     animation: slideshow 12s infinite ease-in-out;
     transition: 400ms;
     z-index: 4;
-    box-shadow: 0 4px 12px 8px var(--light-shadow);
+    box-shadow: 0 .25em .8em .5em var(--light-shadow);
 }
 
 #presentation_section #presentation_content {
@@ -232,22 +233,20 @@ header {
 
 @keyframes slideshow {
     25% {
-        background-image: url(../assets/imgs/money-real.jpg);
+        background-image: url(../assets/imgs/slide/money-real.jpg);
     }
     50% {
-        background-image: url(../assets/imgs/money-dolar-1.jpg);
+        background-image: url(../assets/imgs/slide/money-dolar-1.jpg);
     }
     75% {
-        background-image: url(../assets/imgs/money-dolar-2.jpg);
+        background-image: url(../assets/imgs/slide/money-dolar-2.jpg);
     }
     100% {
-        background-image: url(../assets/imgs/bitcoin.jpg);
+        background-image: url(../assets/imgs/slide/bitcoin.jpg);
     }
 }
 /* ------------------------------------------------- */
-
-/* ------------ HowWorks Section ----------------- */
-#howworks_section {
+.section_container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,12 +256,10 @@ header {
     height: auto;
     width: 100%;
 
-    background-color: var(--white);
-
     padding: 4em 10% 6em 10%;
 }
 
-#howworks_title {
+.section_title_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,29 +267,41 @@ header {
     gap: 2em;
 }
 
-#howworks_title h2 {
+.section_title_container h2 {
     font-size: 2.2em;
     font-family: var(--highlight-font);
     font-weight: 600;
-
-    color: var(--black);
 }
 
-#howworks_title p {
+.section_title_container p {
     font-family: var(--text-font);
     font-size: 1.1em;
-
-    color: var(--gray);
 
     padding-inline: 2em;
 
     text-align: center;
 }
 
-#howworks_title p span {
+.section_title_container p span {
     font-family: var(--text-font);
     font-weight: 500;
+}
+/* ------------ HowWorks Section ----------------- */
+#howworks_section {
+    background-color: var(--white);
+    box-shadow: 0 .25em .8em .5em var(--light-shadow);
+    z-index: 3;
+}
 
+#howworks_title h2 {
+    color: var(--black);
+}
+
+#howworks_title p {
+    color: var(--gray);
+}
+
+#howworks_title p span {
     color: var(--dark-gray);
 }
 
@@ -301,6 +310,7 @@ header {
     align-items: center;
     justify-content: space-evenly;
     gap: 2em;
+    width: calc(100% - 20%);
 }
 
 #howworks_steps:has(.step_card:hover) .step_card:not(:hover) {
@@ -319,7 +329,7 @@ header {
     width: 20%;
 
     transition: 500ms;
-
+    margin-bottom: auto;
     cursor: pointer;
 }
 
@@ -335,7 +345,7 @@ header {
     width: 8em;
 
     background-color: var(--dark-gray);
-    box-shadow: 0 0 12px 4px var(--light-shadow);
+    box-shadow: 0 0 .8em .25em var(--light-shadow);
 
     border-radius: 50%;
 
@@ -381,4 +391,71 @@ header {
     100% {
         box-shadow: 0 0 24px 4px var(--light-shadow);
     }
+}
+/* ------------------------------------------------- */
+
+/* -------------- Partners Section ---------------- */
+#partners_section {
+    background-color: var(--gray);
+}
+
+#partners_title h2 {
+    display: flex;
+    color: var(--white);
+}
+
+#partners_title h2 i {
+    color: var(--green);
+    font-size: 1.1em;
+    margin-left: .4em;
+}
+
+#partners_title p {
+    color: var(--light-gray);
+    font-weight: 500!important;
+}
+
+#partners_title p span {
+    color: var(--green);
+}
+
+#partners_companies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4em;
+    width: 100%;
+}
+
+#partners_companies:has(.company_img:hover) .company_img:not(:hover) {
+    transform: scale(0.95);
+    filter: brightness(.2);
+}
+
+.company_img {
+    height: 10em;
+    flex-basis: 15em;
+
+    overflow: hidden;
+    border-radius: 1em;
+
+    box-shadow: 0 .25em 1em .25em var(--light-shadow);
+
+    transition: 500ms;
+}
+
+.company_img:hover {
+    transform: scale(1.05);
+    filter: brightness(150%);
+    box-shadow: 0 0 1.5em .25em var(--light-gray);
+}
+
+.company_img figure, .company_img figure img {
+    height: 100%;
+    width: 100%;
+}
+
+.company_img figure img {
+    object-fit: cover;
 }
