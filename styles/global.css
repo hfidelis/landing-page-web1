@@ -6,7 +6,7 @@
     /* Basics */
     --black: #0B0B0B;
     --white: #efeded;
-    --heavy-shadow: rgba(0, 0, 0, .8);
+    --heavy-shadow: rgba(0, 0, 0, .75);
     --light-shadow: rgba(0, 0, 0, .45);
 
     /* Color Palette */
