@@ -103,6 +103,7 @@ header {
     color: var(--white);
 
     transition: 400ms;
+    -webkit-transition: 500ms;
 }
 
 #menu ul li a:hover {
@@ -138,6 +139,7 @@ header {
     cursor: pointer;
 
     transition: 400ms;
+    -webkit-transition: 500ms;
 }
 /* ------------------------------------------------- */
 
@@ -150,8 +152,12 @@ header {
     width: 100%;
 
     animation: slideshow 12s infinite ease-in-out;
+    -webkit-animation: slideshow 12s infinite ease-in-out;
     transition: 400ms;
+    -webkit-transition: 500ms;
+
     z-index: 4;
+
     box-shadow: 0 .25em .8em .5em var(--light-shadow);
 }
 
@@ -165,6 +171,7 @@ header {
     padding: 8em 15%;
 
     backdrop-filter: brightness(.15) contrast(105%);
+    -webkit-backdrop-filter: brightness(.15) contrast(105%);
 }
 
 #alert-text {
@@ -186,6 +193,7 @@ header {
     color: var(--white);
 
     animation: pulse 2.5s infinite ease;
+    -webkit-animation: pulse 2.5s infinite ease;
 }
 
 #alert-text h1 i {
@@ -223,6 +231,7 @@ header {
     cursor: pointer;
 
     transition: 400ms;
+    -webkit-transition: 500ms;
 }
 
 #alert-text button i {
@@ -321,7 +330,9 @@ header {
 
 #howworks_steps:has(.step_card:hover) .step_card:not(:hover) {
     filter: grayscale(1);
+    -webkit-filter: grayscale(1);
     transform: scale(0.9);
+    -webkit-transform: scale(0.9);
 }
 
 .step_card {
@@ -335,11 +346,13 @@ header {
     width: 20%;
 
     transition: 500ms;
+    -webkit-transition: 500ms;
     margin-bottom: auto;
 }
 
 .step_card:hover {
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
 
 .card_icon {
@@ -355,8 +368,10 @@ header {
     border-radius: 50%;
 
     animation: glow 3s infinite;
+    -webkit-animation: glow 3s infinite;
 
     transition: 500ms;
+    -webkit-transition: 500ms;
 }
 
 .card_icon i {
@@ -437,7 +452,9 @@ header {
 
 #partners_companies:has(.company_img:hover) .company_img:not(:hover) {
     transform: scale(0.95);
+    -webkit-transform: scale(0.95);
     filter: brightness(.2);
+    -webkit-filter: brightness(.2);
 }
 
 .company_img {
@@ -450,11 +467,14 @@ header {
     box-shadow: 0 .25em 1em .25em var(--light-shadow);
 
     transition: 500ms;
+    -webkit-transition: 500ms;
 }
 
 .company_img:hover {
     transform: scale(1.05);
+    -webkit-transform: scale(1.05);
     filter: brightness(150%);
+    -webkit-filter: brightness(150%);
     box-shadow: 0 0 1.5em .25em var(--light-gray);
 }
 
@@ -530,6 +550,7 @@ header {
     padding: .8em;
     
     transition: 500ms;
+    -webkit-transition: 500ms;
 
     box-shadow: 0 .4em .8em .1em var(--light-shadow);
 }
@@ -601,6 +622,7 @@ footer {
     font-size: 2.2em;
     color: var(--white);
     transition: 500ms;
+    -webkit-transition: 500ms;
 }
 
 #footer_social_medias a i:hover {
