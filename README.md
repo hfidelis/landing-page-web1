@@ -1,6 +1,6 @@
 # AGIO.TAS 💲
 
-Atividade proposta na disciplian de Web I, o objetivo foi desenvolver uma landing page utilizando apenas HTML e CSS com um layout definido pelo professor.
+Atividade proposta na disciplina de Web I, o objetivo foi desenvolver uma landing page utilizando apenas HTML e CSS com um layout definido pelo professor.
 
 ## Tecnologias / Libs 🔧
 
